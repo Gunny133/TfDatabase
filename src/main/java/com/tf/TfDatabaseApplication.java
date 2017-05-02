@@ -11,10 +11,10 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 @EnableDiscoveryClient
 public class TfDatabaseApplication {
 
-	@SuppressWarnings("unused")
 	public static void main(String[] args) throws SQLException {
 		
-		Server server = Server.createTcpServer("-tcpAllowOthers").start();
+		Server.createTcpServer("-tcpAllowOthers").start();
 		SpringApplication.run(TfDatabaseApplication.class, args);
 	}
+	
 }
